@@ -111,3 +111,60 @@ public class Merge_Sort {
     }
 
 }
+//time complexity = o(nlogn)
+//space complexity = o(n)
+
+//my code
+//import java.util.*;
+//public class Main
+//{
+//    public static void main(String args[])
+//    {
+//        int arr[] = {6,3,8,2,1,7};
+//        divide_sort(arr , 0,arr.length-1);
+//        for(int i =0;i<arr.length;i++)
+//        {
+//            System.out.print(arr[i]+" ");
+//        }
+//    }
+//    public static void divide_sort(int arr[],int si , int ei)
+//    {
+//        if(si>=ei)
+//        {
+//            return;
+//        }
+//        int mid = si +(ei-si)/2;
+//        divide_sort(arr,si,mid);
+//        divide_sort(arr,mid+1,ei);
+//        merge(arr,si,mid,ei);
+//    }
+//    public static void merge(int arr[] , int si , int mid , int ei)
+//    {
+//        int temp[] = new int [ei-si+1];
+//        int i =si;
+//        int j= mid+1;
+//        int k =0;
+//        while(i<=mid && j<=ei) {
+//            if (arr[i] > arr[j]) {
+//                temp[k] = arr[j];
+//                j++;
+//            } else {
+//                temp[k] = arr[i];
+//                i++;
+//            }
+//            k++;
+//        }
+//        while(i<=mid)
+//        {
+//            temp[k++] = arr[i++];
+//        }
+//        while(j<=ei)
+//        {
+//            temp[k++] = arr[j++];
+//        }
+//        for( k = 0, i=si;k<temp.length;k++,i++)
+//        {
+//            arr[i] = temp[k];
+//        }
+//    }
+//}
